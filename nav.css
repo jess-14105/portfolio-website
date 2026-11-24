@@ -1,14 +1,25 @@
 header {
   padding: 0 20px;
-  background-color: var(--lilac);
-  height: 50px;
+  height: 110px;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(255, 214, 231, 0.92), rgba(255, 241, 199, 0.92) 30%, rgba(207, 245, 232, 0.92) 55%, rgba(212, 235, 255, 0.92) 78%, rgba(231, 222, 254, 0.92));
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
 #brand {
-  font-weight: bold;
-  font-size: 18px;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
   display: flex;
   align-items: center;
 }
@@ -22,7 +33,7 @@ ul {
 }
 
 ul a {
-  color: white;
+  color: var(--berry);
 }
 
 ul li {
@@ -71,12 +82,14 @@ ul li:hover {
 }
 
 .mobile-menu {
+  background-color: var(--lilac-soft);
   display: none;
   position: absolute;
   top: 50px;
   left: 0;
   height: calc(100vh - 50px);
   width: 100%;
+  z-index: 100;
 }
 
 .mobile-menu li {
