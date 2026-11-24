@@ -1,2 +1,2 @@
 # html-starter
-Design for the Web I HTML Starter files
+Jess Hoffman's Portfolio Website
